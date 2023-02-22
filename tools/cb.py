@@ -1,14 +1,33 @@
-def build():
+import json
+import dice
+
+def get_weapon():
+    with open("dara/weapons.json") as wfile:
+        weapons = json.load(wfile)
+    wnames = list(weapons.keys())
+    wpows = list(weapons.values())
+    wcount = len(wnames)
+    wrand = random.randrange(1,wcount)
+
+    weapon = {wnames[wrand]:wpows[wrand]}
+    return weapon
+def build(name):
     output = {
-        "name": "zack",
+        "name": name,
         "job": "assassin",
-        "strength": "999",
-        "charisma": "999",
-        "intelligence": "999",
-        "luck": "999",
-        "dexterity": "999",
-        "weapon": "longsword",
-        "constitution": "999",
+        "strength": dice.roll(999),
+        "charisma": dice.roll(999),
+        "intelligence": dice.roll(999),
+        "luck": dice.roll(999),
+        "dexterity": dice.roll(999),
+        "weapon": dice.roll(999),
+        "constitution": dice.roll(999),
     }
-    print(output)
-build()
+    jsonoutput = json.dumps(output)
+    
+    with open("data/" + name + "json", "w") as jsonfile:
+        jsonfile.write(jsonoutput)
+        print("success")
+
+
+build("sleepz")
