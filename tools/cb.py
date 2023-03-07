@@ -1,5 +1,5 @@
 import json
-import dice
+import tools.dice as dice 
 
 def get_weapon():
     with open("dara/weapons.json") as wfile:

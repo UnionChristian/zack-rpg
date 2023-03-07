@@ -1,2 +1,2 @@
-import tools.character_builder as cb
-print(cb.output_char())
+import tools.cb as cb 
+name = input("Sleepz")
