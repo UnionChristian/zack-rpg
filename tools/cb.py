@@ -2,7 +2,7 @@ import json
 import tools.dice as dice 
 
 def get_weapon():
-    with open("dara/weapons.json") as wfile:
+    with open("data/weapons.json") as wfile:
         weapons = json.load(wfile)
     wnames = list(weapons.keys())
     wpows = list(weapons.values())
@@ -15,17 +15,17 @@ def build(name):
     output = {
         "name": name,
         "job": "assassin",
-        "strength": dice.roll(999),
-        "charisma": dice.roll(999),
-        "intelligence": dice.roll(999),
-        "luck": dice.roll(999),
-        "dexterity": dice.roll(999),
-        "weapon": dice.roll(999),
-        "constitution": dice.roll(999),
+        "strength": dice.roll(1000),
+        "charisma": dice.roll(1000),
+        "intelligence": dice.roll(1000),
+        "luck": dice.roll(1000),
+        "dexterity": dice.roll(1000),
+        "weapon": dice.roll(1000),
+        "constitution": dice.roll(1000),
     }
     jsonoutput = json.dumps(output)
     
-    with open("data/" + name + "json", "w") as jsonfile:
+    with open("data/" + name + ".json", "w") as jsonfile:
         jsonfile.write(jsonoutput)
         print("success")
 
