@@ -16,12 +16,12 @@ def build(name):
         "name": name,
         "job": "assassin",
         "strength": dice.roll(1000),
-        "charisma": dice.roll(1000),
+        "endurance": dice.roll(1000),
         "intelligence": dice.roll(1000),
         "luck": dice.roll(1000),
         "dexterity": dice.roll(1000),
         "weapon": dice.roll(1000),
-        "constitution": dice.roll(1000),
+        "durability": dice.roll(1000),
     }
     jsonoutput = json.dumps(output)
     
