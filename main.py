@@ -18,7 +18,7 @@ if place == "1":
     decision = input("you encounter a desert island do you 1.explore around and have fun 2. investigate for strong people with high bounties ")
     if decision == "2":
         print("you enter the desert island looking for people with high bounties")
-        decision = input("you have entered the port town Nanohana known for its trading ")
+        decision = input("you have entered the port town Nanohana known for its trading do you 1. buy some merchandise and supplies 2. ")
     if decision == "1":
         print("you have gone to Alabasta to have fun and explore")
         decision = input("you have entered the abandoned city of Yuba do you 1. move on to next city after finding nothing there 2. invistigate the city about how it came to ruins and destroyed")
