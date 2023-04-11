@@ -1,5 +1,6 @@
 import json
 import tools.cb as cb 
+import battle.hit as hit
 name = input("what is your name")
 cb.build(name)
 hero = ""
@@ -30,9 +31,12 @@ if place == "1":
                 decision = input("inside is a huge casino with penthouses named Rain Dinners owned by Crocodile do you 1. start gambling your money 2. look around the casino")
                 if decision == "1":
                     print("you have started gambling all your money and you lose a lot and have become broke")
-                    decision = input("you dont know what to do now that you have no more money 1. steal money from Rain Dinners and escape to the next island Skypiea 2. stay in Alabasta and try to get more money through bounty hunting ")
+                    decision = input("you dont know what to do now that you have no more money 1. steal money from Rain Dinners and escape the casino 2. stay in Alabasta and try to get more money through bounty hunting ")
                     if decision == "1":
-                        print("you steal money from the casino and escape to Skypiea. you currently have a bounty of 0 and have enemies chasing you from Alabasta")
+                        charm = hit.charm(10,9)
+                        print("you steal money from the casino and pay off the guards in order to escape.")
+                        decision = input("you have now gained all your money back plus more do you 1. stay in alabasta and go to Nanohana 2. venture away to the next island Jaya")
+                        if decision == "1":
 
 
 
